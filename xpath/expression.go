@@ -4,16 +4,17 @@ package xpath
 #include <libxml/xpath.h>
 #include <libxml/xpathInternals.h>
 #include <string.h>
+#include <stdlib.h>
 
 void check_xpath_syntax_noop(void *ctx, const char *fmt, ...) {
 }
 
 char *check_xpath_syntax(const char *xpath) {
 	xmlGenericErrorFunc err_func = check_xpath_syntax_noop;
-	initGenericErrorDefaultFunc(&err_func);
+	xmlSetGenericErrorFunc(NULL, err_func);
 	xmlResetLastError();
 	xmlXPathCompile((const xmlChar *)xpath);
-	xmlErrorPtr err = xmlGetLastError();
+	const xmlError *err = xmlGetLastError();
 	if (err != NULL) {
 		if (err->code == XML_XPATH_EXPR_ERROR) {
 			// TODO: Not the cleanest but should scale well
