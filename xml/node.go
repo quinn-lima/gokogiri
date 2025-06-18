@@ -10,8 +10,8 @@ import (
 	"sync"
 	"unsafe"
 
-	. "github.com/jbowtie/gokogiri/util"
-	"github.com/jbowtie/gokogiri/xpath"
+	. "github.com/quinn-lima/gokogiri/util"
+	"github.com/quinn-lima/gokogiri/xpath"
 )
 
 var (

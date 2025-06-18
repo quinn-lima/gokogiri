@@ -34,7 +34,7 @@ char *check_xpath_syntax(const char *xpath) {
 // #include <stdlib.h>
 import "C"
 import "unsafe"
-import . "github.com/jbowtie/gokogiri/util"
+import . "github.com/quinn-lima/gokogiri/util"
 
 //import "runtime"
 import "errors"
