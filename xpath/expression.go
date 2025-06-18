@@ -31,6 +31,7 @@ char *check_xpath_syntax(const char *xpath) {
 	return NULL;
 }
 */
+// #include <stdlib.h>
 import "C"
 import "unsafe"
 import . "github.com/jbowtie/gokogiri/util"
