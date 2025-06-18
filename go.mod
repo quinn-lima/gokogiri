@@ -1,4 +1,4 @@
-module github.com/jbowtie/gokogiri
+module github.com/quinn-lima/gokogiri
 
 go 1.22
 
